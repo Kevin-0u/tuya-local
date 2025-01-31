@@ -1,0 +1,242 @@
+device details:
+  - category: wk # Abbreviation of the pinyin for the Chinese word "温控," which means "thermostat."
+    model: ET-7AW
+    name: Wi-Fi Thermostat
+    product_id: 1oi7spyvsihkwrrr
+    product_name: ET_7AW (Wifi 2.4/5G)
+data models:
+  - abilityId: 101
+    accessMode: rw
+    code: power1
+    description: ""
+    name: 开关 # Switch
+    typeSpec:
+      type: bool
+  - abilityId: 102
+    accessMode: rw
+    code: SetTemp
+    # The temperature range is 5-40°C with a step of 5 (0.5°C) in Celsius and 41-104°F with a step of 10 (1°F) in Fahrenheit.
+    # In ANTI_FROZEN mode, the temperature range is 5-15°C with a step of 5 in Celsius and 41-59°F with a step of 10 in Fahrenheit.
+    description: "摄氏度,间距为5,  5----40℃\\n华氏度,间距为10, 41--104℉\\nANTI_FROZEN模式时 :摄氏度,间距为5,  5----15℃\\n           华氏度,间距为10, 41---59℉"
+    name: 设置温度 # Set temperature
+    typeSpec:
+      type: value
+      max: 1040
+      min: 41 # The minimum temperature should be 50
+      scale: 1 # The scale should be 10
+      step: 1 # The step should be 5 for Celsius and 10 for Fahrenheit
+      unit: ""
+  - abilityId: 103
+    accessMode: rw
+    code: ControlMode
+    description: "0-Anti_frozen Mode\\n1-Smart Mode\\n2-Manual Mode"
+    name: 模式 # Mode
+    typeSpec:
+      type: enum
+      range:
+        - Anti_frozen
+        - Smart
+        - Manual
+  - abilityId: 104
+    accessMode: ro
+    code: SensorError
+    description: "0-room  \\n1-floor\\n2-GFCI"
+    extensions:
+      scope: fault
+    name: 故障 # Fault
+    typeSpec:
+      type: bitmap
+      label:
+        - room
+        - floor
+        - GFCI
+      maxlen: 3
+  - abilityId: 105
+    accessMode: ro
+    code: RoomTemper
+    # The temperature range is 5-45°C with a step of 5 (0.5°C) in Celsius and 41-113°F with a step of 10 (1°F) in Fahrenheit.
+    description: "摄氏度,间距为5,  5----45℃\\n华氏度,间距为10, 41--113℉"
+    name: Room当前温度 # Room current temperature
+    typeSpec:
+      type: value
+      max: 1130
+      min: 0 # The minimum temperature should be 50
+      scale: 1 # The scale should be 10
+      step: 1 # The step should be 5 for Celsius and 10 for Fahrenheit
+      unit: ""
+  - abilityId: 106
+    accessMode: ro
+    code: FloorTemper
+    # The temperature range is 5-45°C with a step of 5 (0.5°C) in Celsius and 41-113°F with a step of 10 (1°F) in Fahrenheit.
+    description: "摄氏度,间距为5,  5----45℃\\n华氏度,间距为10, 41--104℉"
+    name: Floor当前温度 # Floor current temperature
+    typeSpec:
+      type: value
+      max: 1130
+      min: 0
+      scale: 1
+      step: 1
+      unit: ""
+  - abilityId: 107
+    accessMode: rw
+    code: TemperUnitChange
+    description: "0摄氏度 \\n1华氏度" # 0 Celsius; 1 Fahrenheit
+    name: 温标切换 # Temperature unit switch
+    typeSpec:
+      type: bool
+  - abilityId: 108
+    accessMode: rw
+    code: Lock
+    description: "0 解除童锁\\n1 触发童锁" # 0 Remove child lock; 1 Trigger child lock
+    name: 童锁 # Child lock
+    typeSpec:
+      type: bool
+  - abilityId: 109
+    accessMode: rw
+    code: location
+    description: "0-家里\\n1-办公室" # 0-Home; 1-Office
+    name: 温控器位于 # Thermostat located
+    typeSpec:
+      type: bool
+  - abilityId: 110
+    accessMode: rw
+    code: Event_Adaptive_Set
+    # Bit 0 is 0, indicating a seven-day independent programming mode; 1, indicating a 5+1+1 programming mode;
+    # Bit 1 is 1, indicating adaptive on; 0, indicating adaptive off.
+    # For example, 0x02 indicates a seven-day independent programming mode with adaptive on.
+    description: "bit0位 为0表示七天独立编程模式;为1表示5+1+1编程模式;\\nbit1位 为1表示自适应开;为0表示自适应关.\\n例如0x02 表示为七天独立编程模式,自适应=开"
+    name: 周程序编程模式选择/自适应开关设置 # Weekly programming mode selection/adaptive switch setting
+    typeSpec:
+      type: value
+      max: 100 # The maximum value should be 3
+      min: 0
+      scale: 1
+      step: 1
+      unit: ""
+  - abilityId: 111
+    accessMode: rw
+    code: SemChange
+    description: "0 - room  sensor\\n1 - floor sensor\\n2 - both sensors"
+    name: 传感器切换 # Sensor switch
+    typeSpec:
+      type: enum
+      range:
+        - "0"
+        - "1"
+        - "2"
+  - abilityId: 112
+    accessMode: rw
+    code: RoomTemperComp
+    # Celsius, with a step of 5, -5-5°C; Fahrenheit, with a step of 10, -9-9°F
+    description: "摄氏度,间距为5,  -5----5℃\\n华氏度,间距为10, -9----9℉"
+    name: Room当前温度补偿 # Room current temperature compensation
+    typeSpec:
+      type: value
+      max: 90
+      min: -90
+      scale: 1 # The scale should be 10
+      step: 1 # The step should be 5 for Celsius and 10 for Fahrenheit
+      unit: ""
+  - abilityId: 113
+    accessMode: rw
+    code: FloorTemperComp
+    # Celsius, with a step of 5, -5-5°C; Fahrenheit, with a step of 10, -9-9°F
+    description: "摄氏度,间距为5,  -5----5℃\\n华氏度,间距为10, -9----9℉"
+    name: Floor当前温度补偿 # Floor current temperature compensation
+    typeSpec:
+      type: value
+      max: 90
+      min: -90
+      scale: 1 # The scale should be 10
+      step: 1 # The step should be 5 for Celsius and 10 for Fahrenheit
+      unit: ""
+  - abilityId: 114
+    accessMode: rw
+    code: TemperDiff
+    # 0_5 represents 0.5; When the device reports the value in Celsius, the values are 5, 10, 20, and 30;
+    # When the device reports the value in Fahrenheit, the values are 10, 20, 40, and 60;
+    # These values are the values multiplied by 10
+    description: "0_5代表0.5\\n摄氏度时设备上报的值  5  ,10 ,20,30;\\n华氏度时设备上报的值  10  ,20  , 40, 60;  这些值为乘以10后的值"
+    name: "保留  " # Reserved
+    typeSpec:
+      type: enum
+      range:
+        - "0_5"
+        - "1"
+        - "2"
+        - "3"
+  - abilityId: 115
+    accessMode: wr
+    code: Reset
+    description: ""
+    name: 恢复出厂设置 # Factory reset
+    typeSpec:
+      type: bool
+  - abilityId: 116
+    accessMode: rw
+    code: PowerSet
+    description: ""
+    name: 功率设置 # Power setting
+    typeSpec:
+      type: value
+      max: 4500
+      min: 0
+      scale: 1
+      step: 1
+      unit: W
+  - abilityId: 117
+    accessMode: ro
+    code: HeaterTime
+    description: ""
+    name: 加热时间 # Heating time
+    typeSpec:
+      type: value
+      max: 1470279295
+      min: 0
+      scale: 1
+      step: 1
+      unit: ""
+  - abilityId: 118
+    accessMode: ro
+    code: work_status
+    description: "0-warming\\n1-heating"
+    name: 工作状态 # Working status
+    typeSpec:
+      type: bool
+  - abilityId: 119
+    accessMode: rw
+    code: week_program
+    # Monday to Sunday are 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, and 0x40, respectively; WAKE, LEAVE, RETURN, and SLEEP are 0x00, 0x01, 0x02, and 0x03, respectively.
+    # For example, the time 07:30 is 0x07, 0x1e; For example, the temperature 39.5 is 0x01, 0x8b;
+    # For example, the app sends the wake stage at 7:30 and 39.5°C on Monday and Wednesday.
+    # The data format is as follows: 0x55 0xaa 0x00 0x06 0x00 0x0a 0x1a 0x00 0x00 0x06 05 00 07 1e 01 8b crc;
+    # For example, the device reports the wake stage at 7:30 and 39.5°C on Monday and Wednesday.
+    # The data format is as follows: 0x55 0xaa 0x00 0x07 0x00 0x0a 0x1a 0x00 0x00 0x06 05 00 07 1e 01 8b crc;
+    # When the device is powered on and reports data for the first time, it reports data for one day at a time.
+    description: "周一到周日，分别是 0x01,0x02,0x04,0x08,0x10,0x20，0x40表示；\\nWAKE、LEAVE、RETURN、SLEEP分别是 0x00 0x01 0x02 0x03表示。\\n例如：时间07:30， 0x07  0x1e\\n例如：温度39.5，  0x01  0x8b\\n例如app下发 周一周三  wake阶段  7:30  39.5℃\\n数据格式如下:0x55 0xaa 0x00 0x06 0x00 0x0a 0x1a 0x00 0x00 0x06 05 00 07 1e 01 8b crc\\n例如设备端上报 周一周三  wake阶段  7:30  39.5℃\\n数据格式如下:0x55 0xaa 0x00 0x07 0x00 0x0a 0x1a 0x00 0x00 0x06 05 00 07 1e 01 8b crc\\n初上电上报数据时,一次上报一天的数据\\n"
+    name: 周程序 # Weekly program
+    typeSpec:
+      type: raw
+      maxlen: 128
+  - abilityId: 121
+    accessMode: rw
+    code: FloorLimit
+    description: "摄氏20--50℃\\n华氏68--122℉" # 20-50°C; 68-122°F
+    name: 地板温度限制 # Floor temperature limit
+    typeSpec:
+      type: value
+      max: 1220
+      min: 200
+      scale: 1
+      step: 1
+      unit: ""
+  - abilityId: 122
+    accessMode: wr
+    code: inquire
+    # Here, all weekly programming data is reported, and it is reported by day.
+    # For example, the wake stage on Monday is reported as 7:00 23.5°C, leave 9:30 25°C, return 11:30 22°C, and sleep 16:00 19°C.
+    # The data format is as follows: 55 AA 00 07 00 19 1A 00 00 15 01 00 07 00 00 EB 01 09 1E 00 FA 02 11 1E 00 DC 03 16 00 00 BE 47
+    description: "这里上报所有周程序数据,按天上报,例如上报周一wake 7:00  23.5℃  leave 9:30  25℃   return 11:30  22℃  sleep   16:00  19℃\\n数据格式如下:55 AA 00 07 00 19 1A 00 00 15   01   00  07 00 00 EB  01  09 1E 00 FA  02  11 1E 00 DC  03  16 00 00 BE 47"
+    name: 查询 # Inquire
+    typeSpec:
+      type: bool

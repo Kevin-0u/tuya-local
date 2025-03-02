@@ -1,227 +1,227 @@
 device details:
-    - category: qn # Abbreviation of the pinyin for the Chinese word "取暖," which means "warming" or "heating."
-      product_id: aggdycelaybrbp7s
-      product_name: Amantii Bespoke R1-2-AP1
+  - category: qn # Abbreviation of the pinyin for the Chinese word "取暖," which means "warming" or "heating."
+    product_id: aggdycelaybrbp7s
+    product_name: Amantii Bespoke R1-2-AP1
 data models:
-    - abilityId: 101
-      accessMode: rw
-      code: Sound_switch
-      description: ""
-      name: Sound
-      typeSpec:
-          type: bool
-    - abilityId: 102
-      accessMode: rw
-      code: Red_fuel
-      description: ""
-      name: Ember_Bed
-      typeSpec:
-          type: value
-          max: 8
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 103
-      accessMode: rw
-      code: Green_fuel
-      description: ""
-      name: Ember_Bed
-      typeSpec:
-          type: value
-          max: 8
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 104
-      accessMode: rw
-      code: Blue_flame
-      description: ""
-      name: flame
-      typeSpec:
-          type: value
-          max: 6
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 105
-      accessMode: rw
-      code: Orange_flame
-      description: ""
-      name: flame
-      typeSpec:
-          type: value
-          max: 6
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 106
-      accessMode: rw
-      code: Yellow_flame
-      description: ""
-      name: flame
-      typeSpec:
-          type: value
-          max: 6
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 107
-      accessMode: rw
-      code: Blue_fuel
-      description: ""
-      name: Ember_Bed
-      typeSpec:
-          type: value
-          max: 8
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 108
-      accessMode: rw
-      code: Heat
-      description: ""
-      name: Heat
-      typeSpec:
-          type: enum
-          range:
-              - "OFF"
-              - H1
-              - H2
-              - Auto
-    - abilityId: 109
-      accessMode: rw
-      code: open
-      description: ""
-      name: Amantii
-      typeSpec:
-          type: bool
-    - abilityId: 110
-      accessMode: rw
-      code: temperature_set
-      description: ""
-      name: temperature_set
-      typeSpec:
-          type: enum
-          range:
-              - 15C_59F
-              - 16C_60F_61F
-              - 17C_62F_63F
-              - 18C_64F_65F
-              - 19C_66F_67F
-              - 20C_68F
-              - 21C_69F_70F
-              - 22C_71F_72F
-              - 23C_73F_74F
-              - 24C_75F_76F
-              - 25C_77F_78F
-              - 26C_79F_80F
-              - 27C_81F_82F
-              - 28C_83F
-    - abilityId: 111
-      accessMode: ro
-      code: temperature_house
-      description: ""
-      name: temperature_house
-      typeSpec:
-          type: enum
-          range:
-              - 15C_59F
-              - 16C_60F_61F
-              - 17C_62F_63F
-              - 18C_64F_65F
-              - 19C_66F_67F
-              - 20C_68F
-              - 21C_69F_70F
-              - 22C_71F_72F
-              - 23C_73F_74F
-              - 24C_75F_76F
-              - 25C_77F_78F
-              - 26C_79F_80F
-              - 27C_81F_82F
-              - 28C_83F
-              - 29C_84F_85F
-              - 30C_86F
-              - 31C_87F_88F
-              - 32C_89F_90F
-              - 33C_91F_92F
-              - 34C_93F_94F
-              - 35C_95F
-              - 36C_96F_97F
-              - 5C_41F
-              - 6C_42F_43F
-              - 7C_44F_45F
-              - 8C_46F_47F
-              - 9C_48F_49F
-              - 10C_50F
-              - 11C_51F_52F
-              - 12C_53F_54F
-              - 13C_55F_56F
-              - 14C_57F_58F
-    - abilityId: 112
-      accessMode: rw
-      code: AD
-      description: ""
-      name: AD
-      typeSpec:
-          type: value
-          max: 11
-          min: 0
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 113
-      accessMode: rw
-      code: speed
-      description: ""
-      name: speed
-      typeSpec:
-          type: value
-          max: 3
-          min: 1
-          scale: 0
-          step: 1
-          unit: ""
-    - abilityId: 114
-      accessMode: rw
-      code: Turn_OFF
-      description: ""
-      name: Turn_OFF
-      typeSpec:
-          type: value
-          max: 80
-          min: 0
-          scale: 1
-          step: 5
-          unit: hour
-    - abilityId: 115
-      accessMode: ro
-      code: Warning
-      description: ""
-      name: Warning
-      typeSpec:
-          type: enum
-          range:
-              - none
-              - E1
-              - E2
-              - E3
-    - abilityId: 116
-      accessMode: rw
-      code: furl_switch
-      description: ""
-      name: Ember_Bed
-      typeSpec:
-          type: bool
-    - abilityId: 117
-      accessMode: rw
-      code: flame_switch
-      description: ""
-      name: Flame
-      typeSpec:
-          type: bool
+  - abilityId: 101
+    accessMode: rw
+    code: Sound_switch
+    description: ""
+    name: Sound
+    typeSpec:
+      type: bool
+  - abilityId: 102
+    accessMode: rw
+    code: Red_fuel
+    description: ""
+    name: Ember_Bed
+    typeSpec:
+      type: value
+      max: 8
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 103
+    accessMode: rw
+    code: Green_fuel
+    description: ""
+    name: Ember_Bed
+    typeSpec:
+      type: value
+      max: 8
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 104
+    accessMode: rw
+    code: Blue_flame # The color of the flame for this DP is actually yellow.
+    description: ""
+    name: flame
+    typeSpec:
+      type: value
+      max: 6
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 105
+    accessMode: rw
+    code: Orange_flame # The color of the flame for this DP is actually red.
+    description: ""
+    name: flame
+    typeSpec:
+      type: value
+      max: 6
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 106
+    accessMode: rw
+    code: Yellow_flame # The color of the flame for this DP is actually orange.
+    description: ""
+    name: flame
+    typeSpec:
+      type: value
+      max: 6
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 107
+    accessMode: rw
+    code: Blue_fuel
+    description: ""
+    name: Ember_Bed
+    typeSpec:
+      type: value
+      max: 8
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 108
+    accessMode: rw
+    code: Heat
+    description: ""
+    name: Heat
+    typeSpec:
+      type: enum
+      range:
+        - "OFF"
+        - H1
+        - H2
+        - Auto
+  - abilityId: 109
+    accessMode: rw
+    code: open
+    description: ""
+    name: Amantii
+    typeSpec:
+      type: bool
+  - abilityId: 110
+    accessMode: rw
+    code: temperature_set
+    description: ""
+    name: temperature_set
+    typeSpec:
+      type: enum
+      range:
+        - 15C_59F
+        - 16C_60F_61F
+        - 17C_62F_63F
+        - 18C_64F_65F
+        - 19C_66F_67F
+        - 20C_68F
+        - 21C_69F_70F
+        - 22C_71F_72F
+        - 23C_73F_74F
+        - 24C_75F_76F
+        - 25C_77F_78F
+        - 26C_79F_80F
+        - 27C_81F_82F
+        - 28C_83F
+  - abilityId: 111
+    accessMode: ro
+    code: temperature_house
+    description: ""
+    name: temperature_house
+    typeSpec:
+      type: enum
+      range:
+        - 15C_59F
+        - 16C_60F_61F
+        - 17C_62F_63F
+        - 18C_64F_65F
+        - 19C_66F_67F
+        - 20C_68F
+        - 21C_69F_70F
+        - 22C_71F_72F
+        - 23C_73F_74F
+        - 24C_75F_76F
+        - 25C_77F_78F
+        - 26C_79F_80F
+        - 27C_81F_82F
+        - 28C_83F
+        - 29C_84F_85F
+        - 30C_86F
+        - 31C_87F_88F
+        - 32C_89F_90F
+        - 33C_91F_92F
+        - 34C_93F_94F
+        - 35C_95F
+        - 36C_96F_97F
+        - 5C_41F
+        - 6C_42F_43F
+        - 7C_44F_45F
+        - 8C_46F_47F
+        - 9C_48F_49F
+        - 10C_50F
+        - 11C_51F_52F
+        - 12C_53F_54F
+        - 13C_55F_56F
+        - 14C_57F_58F
+  - abilityId: 112
+    accessMode: rw
+    code: AD
+    description: ""
+    name: AD
+    typeSpec:
+      type: value
+      max: 11
+      min: 0
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 113
+    accessMode: rw
+    code: speed
+    description: ""
+    name: speed
+    typeSpec:
+      type: value
+      max: 3
+      min: 1
+      scale: 0
+      step: 1
+      unit: ""
+  - abilityId: 114
+    accessMode: rw
+    code: Turn_OFF
+    description: ""
+    name: Turn_OFF
+    typeSpec:
+      type: value
+      max: 80
+      min: 0
+      scale: 1
+      step: 5
+      unit: hour
+  - abilityId: 115
+    accessMode: ro
+    code: Warning
+    description: ""
+    name: Warning
+    typeSpec:
+      type: enum
+      range:
+        - none
+        - E1
+        - E2
+        - E3
+  - abilityId: 116
+    accessMode: rw
+    code: furl_switch
+    description: ""
+    name: Ember_Bed
+    typeSpec:
+      type: bool
+  - abilityId: 117
+    accessMode: rw
+    code: flame_switch
+    description: ""
+    name: Flame
+    typeSpec:
+      type: bool

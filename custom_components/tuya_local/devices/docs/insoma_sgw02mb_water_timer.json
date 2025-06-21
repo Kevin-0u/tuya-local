@@ -1,0 +1,274 @@
+{
+  "result": [
+    {
+      "category": "ggq",
+      "icon": "smart/icon/ay1501578980436KOuNc/49c81b09be4dc83ff5d4eab8f7cc5e25.jpg",
+      "model": "YZD02B,SGW02MB,SGW08MB",
+      "name": "Smart Dual Water  Timer",
+      "product_id": "jntxv3q4",
+      "product_name": "一出二水阀V2（MCU通用对接 2AA电池）",
+      "sub": true
+    }
+  ],
+  "modelId": "fi1bzc",
+  "services": [
+    {
+      "actions": [],
+      "code": "",
+      "description": "",
+      "events": [],
+      "name": "默认服务",
+      "properties": [
+        {
+          "abilityId": 11,
+          "accessMode": "ro",
+          "code": "battery_percentage",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_battery",
+            "attribute": "1024"
+          },
+          "name": "主电池电量",
+          "typeSpec": {
+            "type": "value",
+            "max": 100,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "%"
+          }
+        },
+        {
+          "abilityId": 19,
+          "accessMode": "ro",
+          "code": "fault",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-baojing",
+            "scope": "fault",
+            "attribute": "1024"
+          },
+          "name": "故障告警",
+          "typeSpec": {
+            "type": "bitmap",
+            "label": [
+              "1",
+              "2"
+            ],
+            "maxlen": 2
+          }
+        },
+        {
+          "abilityId": 101,
+          "accessMode": "rw",
+          "code": "normal_timer",
+          "description": "",
+          "name": "普通定时",
+          "typeSpec": {
+            "type": "raw",
+            "maxlen": 128
+          }
+        },
+        {
+          "abilityId": 102,
+          "accessMode": "rw",
+          "code": "cycle_timer",
+          "description": "",
+          "name": "循环定时",
+          "typeSpec": {
+            "type": "raw",
+            "maxlen": 128
+          }
+        },
+        {
+          "abilityId": 103,
+          "accessMode": "rw",
+          "code": "countdown_2",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_time2",
+            "attribute": "4096"
+          },
+          "name": "开关2倒计时",
+          "typeSpec": {
+            "type": "value",
+            "max": 1440,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "min"
+          }
+        },
+        {
+          "abilityId": 104,
+          "accessMode": "rw",
+          "code": "switch_2",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power2",
+            "attribute": "4096"
+          },
+          "name": "开关2",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 105,
+          "accessMode": "rw",
+          "code": "switch_1",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power2",
+            "attribute": "4096"
+          },
+          "name": "开关1",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 106,
+          "accessMode": "rw",
+          "code": "countdown_1",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_time2",
+            "attribute": "4096"
+          },
+          "name": "开关1倒计时",
+          "typeSpec": {
+            "type": "value",
+            "max": 1440,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "min"
+          }
+        },
+        {
+          "abilityId": 110,
+          "accessMode": "ro",
+          "code": "use_time_2",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_time3",
+            "attribute": "4096",
+            "trigger": "direct"
+          },
+          "name": "使用时间2",
+          "typeSpec": {
+            "type": "value",
+            "max": 86400,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "s"
+          }
+        },
+        {
+          "abilityId": 111,
+          "accessMode": "ro",
+          "code": "use_time_1",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_time3",
+            "attribute": "4096",
+            "trigger": "direct"
+          },
+          "name": "使用时间1",
+          "typeSpec": {
+            "type": "value",
+            "max": 86400,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "s"
+          }
+        },
+        {
+          "abilityId": 112,
+          "accessMode": "ro",
+          "code": "status_1",
+          "description": "",
+          "extensions": {
+            "scope": "",
+            "trigger": "direct"
+          },
+          "name": "状态1",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "manual",
+              "auto",
+              "idle"
+            ]
+          }
+        },
+        {
+          "abilityId": 113,
+          "accessMode": "ro",
+          "code": "status_2",
+          "description": "",
+          "extensions": {
+            "scope": "",
+            "trigger": "direct"
+          },
+          "name": "状态2",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "manual",
+              "auto",
+              "idle"
+            ]
+          }
+        },
+        {
+          "abilityId": 114,
+          "accessMode": "rw",
+          "code": "weather_delay2",
+          "description": "",
+          "name": "天气延时2",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "OFF",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ]
+          }
+        },
+        {
+          "abilityId": 117,
+          "accessMode": "rw",
+          "code": "weather_delay",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_light2",
+            "attribute": "4096"
+          },
+          "name": "天气延时",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "OFF",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
